@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/interface2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/background"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="My Child"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/interface1"
+            android:id="@+id/interface2">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/idText"
+                    android:layout_width="200dp"
+                    android:hint="아이디"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_below="@id/input_layout"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordText"
+                    android:inputType="textPassword"
+                    android:layout_width="200dp"
+                    android:hint="비밀번호"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/interface1"
+            android:layout_toRightOf="@id/interface2"
+            android:layout_alignTop="@id/interface2">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="로그인"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/button_style"
+                android:id="@+id/btn_login"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/interface1"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="120dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/id_password_find"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아이디/비밀번호 찾기"/>
+
+            <TextView
+                android:id="@+id/signup_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회원가입"
+                android:paddingRight="10dp"
+                android:layout_alignParentRight="true" />
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/btn_google"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/id_password_find"
+                android:layout_marginTop="10dp"
+                />
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/btn_facebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_google"
+                android:layout_marginTop="10dp"/>
+
+           <com.kakao.usermgmt.LoginButton
+               android:id="@+id/btn_kakao"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/btn_facebook"
+               android:layout_marginTop="10dp"
+               />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>
